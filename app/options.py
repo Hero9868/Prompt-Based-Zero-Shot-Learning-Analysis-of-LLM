@@ -10,17 +10,17 @@ def intro():
 def option_a():
     import streamlit as st
     input=st.sidebar.text_input('Enter Input')
-    click=st.sidebar.button("Some Action")
+    click=st.button("Some Action")
 
 
 def option_b():
     import streamlit as st
     input=st.sidebar.text_input('Enter Input')
-    click=st.sidebar.button("Some Action")
+    click=st.button("Some Action")
 
 
 def option_c():
     import streamlit as st
     input=st.sidebar.text_input('Enter Input')
-    click=st.sidebar.button("Some Action")
+    click=st.button("Some Action")
     
