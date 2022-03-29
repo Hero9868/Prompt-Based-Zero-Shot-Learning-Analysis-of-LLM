@@ -2,6 +2,7 @@
 import requests
 import json
 import os
+import constants as const
 
 API_KEY = os.environ['API_KEY']
 
@@ -15,7 +16,7 @@ def inference(CUSTOM_PROMPT: str):
             "maxTokens": 100,
             "topKReturn": 0,
             "topP":1,
-            "stopSequences":['Input'],
+            "stopSequences":[const.END_OF_TEXT[CUSTOM_PROMPT]],
             "temperature": 0.78
         }
     )

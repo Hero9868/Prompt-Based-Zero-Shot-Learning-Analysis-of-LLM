@@ -54,3 +54,10 @@ Catchy screamer headline for a column about European eggs pasteurization laws: "
 Catchy screamer headline for a column about the royal family's new dog: "Let them eat cats".
 Catchy screamer headline for a column about hazards of wearing skinny jeans: "Killer Tight".
 Catchy screamer headline for a column about text messaging at funerals:"""
+
+
+END_OF_TEXT = {
+    TRANSPILE_PROMPT: "Input",
+    EXPLAIN_WORD: "What",
+    CATCHY_PROMPT: "Catchy"
+}
