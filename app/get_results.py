@@ -12,10 +12,10 @@ def inference(CUSTOM_PROMPT: str):
         json={
             "prompt": f"{CUSTOM_PROMPT}", 
             "numResults": 1, 
-            "maxTokens": 20,
+            "maxTokens": 100,
             "topKReturn": 0,
             "topP":1,
-            "stopSequences":['<|endoftext|>'],
+            "stopSequences":['Input'],
             "temperature": 0.78
         }
     )

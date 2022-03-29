@@ -1,5 +1,3 @@
-import inspect
-import textwrap
 from collections import OrderedDict
 
 import streamlit as st
@@ -32,29 +30,32 @@ OPTIONS = OrderedDict(
     [
         ("—", (options.intro, None)),
         (
-            "Option A",
+            "Transpile Python to JavaScript",
             (
                 options.option_a,
                 """
-                Description
+                Given a python code as input, we will transform it to a javascript code.
+                Click on generate once the prompt is suitable to you.
 """,
             ),
         ),
         (
-            "Option B",
+            "Explain Word",
             (
                 options.option_b,
                 """
-                Description
+                Given a word and its meaning, we will explain the word.
+                Click on generate once the prompt is suitable to you.
 """,
             ),
         ),
         (
-            "Option C",
+            "Catchy Prompt",
             (
                 options.option_c,
                 """
-                Description
+                Given a prompt, we will generate a catchy headline.
+                Click on generate once the prompt is suitable to you.
 """,
             ),
         ),
@@ -65,27 +66,10 @@ OPTIONS = OrderedDict(
 def run():
     option_name = st.sidebar.selectbox("Select an Option", list(OPTIONS.keys()), 0)
     demo = OPTIONS[option_name][0]
-
-    if option_name == "—":
-        show_code = False
-    else:
-        show_code = st.sidebar.checkbox("Show code", False)
-        st.markdown("# %s" % option_name)
-        description = OPTIONS[option_name][1]
-        if description:
-            st.write(description)
-        # Clear everything from the intro page.
-        # We only have 4 elements in the page so this is intentional overkill.
-        for i in range(10):
-            st.empty()
+    for i in range(10):
+        st.empty()
 
     demo()
-
-    if show_code:
-        st.markdown("## Code")
-        sourcelines, _ = inspect.getsourcelines(demo)
-        st.code(textwrap.dedent("".join(sourcelines[1:])))
-
 
 if __name__ == "__main__":
     run()
