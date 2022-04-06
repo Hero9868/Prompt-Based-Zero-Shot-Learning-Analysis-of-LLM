@@ -10,6 +10,6 @@ We created a user-friendly developer platform and provide api for the same to sh
 
 ## Members
 
-1. Biswaroop Bhattacharjee - 190832
+1. Pratyush Khuntia - 1905828
 2. Junaid Rahim - 1905831
-3. Pratyush Khuntia - 1905828
+3. Biswaroop Bhattacharjee - 1905832
